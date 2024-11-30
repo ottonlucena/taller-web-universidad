@@ -1,0 +1,34 @@
+# Galería de Arte - Otton Lucena & Hector Salas 🌟
+
+¡Bienvenidos a nuestra galería de arte en línea!  
+Este proyecto presenta una plataforma sencilla donde los usuarios pueden explorar diversas obras de arte, obtener información de contacto y disfrutar de un diseño atractivo y responsivo.
+
+## Documentation
+
+- Diseño moderno y responsivo con **Bootstrap 5**.
+- Uso de la tipografía **Poppins** para un estilo actualizado.
+- Enlaces activos destacados en el menú de navegación.
+- Código modular y estructurado en HTML y CSS.
+
+### 🚀 Tecnologías Utilizadas
+
+- **HTML5**
+- **CSS3** (con diseño responsivo y variables CSS)
+- **Bootstrap 5** (para estilos y componentes predefinidos)
+- **Google Fonts** (Poppins)
+
+---
+
+### 🎨 Diseño
+
+#### Paleta de Colores
+
+- **Fondo principal:** `#f4f4f4`
+- **Primario:** `#2c3e50`
+- **Secundario:** `#34495e`
+- **Enlaces:** `#3498db`
+- **Hover en enlaces:** `#2980b9`
+
+## Authors
+
+- [@ottonlucena](https://www.github.com/ottonlucena) & @hectorSalas
