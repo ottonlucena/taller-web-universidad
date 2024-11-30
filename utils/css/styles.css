@@ -1,0 +1,125 @@
+/* Paleta de colores y variables */
+:root {
+  --color-fondo: #f4f4f4;
+  --color-primario: #2c3e50;
+  --color-secundario: #34495e;
+  --color-enlace: #3498db;
+  --color-enlace-hover: #2980b9;
+  --color-texto: #333;
+  --transicion: all 0.3s ease;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", "Arial", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 600;
+}
+
+p,
+label,
+input,
+textarea,
+button {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--color-texto);
+}
+
+/* Personalización del navbar de Bootstrap */
+header .navbar {
+  background-color: var(--color-secundario);
+  transition: var(--transicion);
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-underline .nav-link:hover {
+  color: white;
+}
+
+.nav-underline .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+/* Enlace activo del menú */
+.nav-link.active {
+  font-weight: bold;
+  color: white;
+  background-color: var(--color-enlace-hover);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Estilo para la sección principal */
+main {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-enlace);
+}
+
+main p {
+  text-align: justify;
+  line-height: 1.6;
+  color: var(--color-texto);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    margin: 10px;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,59 @@
+/* Galería responsiva en grid */
+main section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+main section div {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main section div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+main section div p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--color-secundario);
+}
+
+main section div img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+main section div img:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design para Galería */
+@media screen and (max-width: 1200px) {
+  main section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main section {
+    grid-template-columns: 1fr;
+  }
+}
