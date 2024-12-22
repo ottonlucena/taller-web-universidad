@@ -22,7 +22,9 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="utils/img/art_logo.png" alt="logo"  width="180"></a>
+          <a class="navbar-brand" href="index.html"
+            ><img src="utils/img/art_logo.png" alt="logo" width="180"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -69,41 +71,68 @@
 
       <section>
         <h2>Formulario de contacto</h2>
-        <form action="#">
+        <form action="#" class="contact-form" id="form">
           <div>
             <label for="nombre">Nombre:</label>
             <input
               type="text"
-              id="nombre"
+              id="name"
               placeholder="Nombre"
               name="nombre"
               required
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü]+(?:\s[A-Za-zÑñÁáÉéÍíÓóÚúÜü]+)*$"
+              title="Nombre no valido"
             />
           </div>
           <div>
             <label for="email">Correo electrónico:</label>
             <input
               type="email"
-              id="email"
+              id="correo"
               placeholder="Correo electrónico"
               name="email"
+              pattern="[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[cC][oO][mM](:[0-9]{1,5})?"
               required
+              title="Email incorrecto"
             />
           </div>
           <div>
             <label for="solicitud">Tipo de solicitud</label>
-            <select id="solicitud" name="solicitud" required>
+            <select
+              id="request"
+              name="solicitud"
+              required
+              title="Tipo de solicitud requerido"
+            >
               <option value="">Seleccione una opcion</option>
               <option value="compra">Compra</option>
               <option value="consulta">Consulta</option>
               <option value="venta">Venta</option>
             </select>
+            <span id="solicitud-error" class="contact-error none"
+              >Tipo de solicitud requerido</span
+            >
           </div>
           <div>
             <label for="descripcion">Mensaje</label>
-            <textarea name="mensaje" id="mensaje" maxlength="150"></textarea>
+            <textarea
+              name="mensaje"
+              id="message"
+              maxlength="150"
+              data-pattern="^.{1,150}$"
+              required
+              title="Mensaje debe tener máximo 150 caracteres"
+            ></textarea>
           </div>
-          <button type="submit">Enviar</button>
+          <button id="btnSend" type="submit">Enviar</button>
+          <div class="contact-form-loader none text-center">
+            <img src="utils/ball-triangle.svg" alt="Cargando" />
+          </div>
+          <div class="contact-form-response none">
+            <p class="text-center fw-bold">
+              Los datos han sido enviado correctamente.
+            </p>
+          </div>
         </form>
       </section>
     </main>
@@ -116,5 +145,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="/utils/js/contacto.js"></script>
   </body>
 </html>

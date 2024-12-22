@@ -62,3 +62,54 @@ form textarea {
   resize: vertical;
   min-height: 100px;
 }
+
+.contact-form > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.contact-form button[type="submit"] {
+  width: 50%;
+  font-weight: bold;
+}
+
+.contact-form [required]:valid {
+  border: thin solid #4caf50;
+}
+
+.contact-form [required]:invalid {
+  border: thin solid #f44336;
+}
+
+/*Mensaje de error */
+.contact-error {
+  margin-top: -0.8rem;
+  font-size: 80%;
+  background-color: red;
+  color: white;
+  transition: all 800ms ease;
+  font-weight: bold;
+}
+
+.contact-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
